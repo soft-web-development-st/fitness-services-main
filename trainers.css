@@ -1,0 +1,150 @@
+
+/* Nav 1, Nav 2, Nav Bottom, Footer are all styled using style.css */
+
+/* ===========
+   Trainer Main
+    ========== */
+/* Background image */
+.trainers {
+    margin: 5rem 0;
+}
+
+.trainer-main {
+    height: 300px;
+    background: url('./images/trainer-main.jpg') no-repeat center;
+    background-size: 100% 100%;
+}
+
+.trainer-btn {
+    margin-top: 0;
+}
+
+/* controls the layout in this section */
+.trainer-contents {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 5rem;
+    max-width: 850px;
+    margin: auto;
+}
+
+/* Right side of grid layout */
+.trainer-nav-2-contents-right h5 {
+    margin-top: 0;
+}
+
+.trainer-contents-img {
+    background-color: rgba(0, 0, 0, 0.9);
+    margin-bottom: 2rem;
+}
+
+.trainer-nav-2-contents-right img {
+    height: 18rem;
+    width: 100%;
+    opacity: 0.8;
+}
+
+.trainer-nav-2-contents-right p,
+.trainer-nav-2-contents-left-item p {
+    line-height: 1.2;
+    font-size: .95rem;
+    margin-bottom: 1rem;
+}
+
+/* ** left side of grid layout ** */
+.trainer-nav-2-contents-left-item {
+    border: 1px solid var(--linebreak-grey);
+    position: relative;
+}
+
+.trainer-nav-2-contents-left h5 {
+    text-transform: uppercase;
+    background-color: var(--black);
+    color: var(--light-grey);
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+/* left side top box */
+.trainer-nav-2-contents-left > div {
+    margin-bottom: 1rem;
+}
+
+.trainer-nav-2-contents-left-item ul {
+    margin: 1rem 0;
+    list-style-position: inside;
+}
+
+.trainer-nav-2-contents-left-item li {
+    list-style-type: disc;
+    margin: .3rem 0;
+}
+
+/* left side bottom box */
+.trainer-bottom {
+    padding: 1rem;
+} 
+
+/* Form layout and styles */
+.subscribe-form input[type='text'],
+.subscribe-form input[type='email'],
+.subscribe-form input[type='submit'],
+.subscribe-form textarea {
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    display: block;
+    width: 100%;
+    border-radius: .1rem;
+    border: 1px solid var(--linebreak-grey);
+    
+}
+
+.subscribe-form input[type='text'],
+.subscribe-form input[type='email'],
+.subscribe-form textarea {
+    margin: 1rem 0rem;
+}
+
+.subscribe-form input::placeholder,
+.subscribe-form textarea::placeholder  {
+    font-size: .8rem;
+    font-family: sans-serif;
+    font-weight: lighter;
+    color: lightgrey;
+    text-transform: uppercase;
+}
+
+.subscribe-form input[type='submit'] {
+    border: none;
+    background-color: var(--red);
+    color: var(--white);
+    padding: 0.4330em 3.7500em;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+/* =============
+   Media Queries
+   ============= */
+@media screen and (max-width: 900px) {
+    .trainer-contents {
+        gap: 1rem;
+    }
+       
+}
+
+@media screen and (max-width: 600px) {
+    .trainer-contents {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .trainer-nav-2-contents-right p {
+        font-size: .9rem;
+    } 
+
+    .trainer-nav-2-contents-left-item li {
+        list-style-type: disc;
+        margin: .3rem 0;
+        
+    }
+}

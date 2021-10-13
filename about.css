@@ -1,0 +1,119 @@
+/* Nav 1, Nav 2, Nav Bottom, Footer are all styled using style.css */
+
+/* ===========
+    About Main
+    ========== */
+/* Background image */
+.about-main {
+    height: 300px;
+    background: url('./images/about-main.jpg') no-repeat center;
+    background-size: 100% 100%;
+}
+
+/* Text within the about main section */
+.about-main-title h1 {
+    margin-left: 5rem;
+}
+
+/* =================
+    Mission & Vision
+    ================ */
+/* Goals - Achieve section structure */
+.mission-vision {
+    margin: 4rem 0;
+}
+
+/* controls the layout in this section */
+.mission-vision-contents-group-1,
+.mission-vision-contents-group-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+/* styles for h2, h5, p are all at the top in the universal styles section at the top of style.css */
+
+.mission-vision-item p:not(:first-child) {
+    margin-bottom: 1rem;
+}
+
+/* Image on the top right and bottom left of the two grid columns */
+.mission-vision-item img {
+    width: 100%;
+    max-height: 50rem;
+}
+
+/* =============
+   Media Queries
+   ============= */
+   @media screen and (max-width: 1024px) {
+    .title-main-contents {
+        margin: 0 2rem;
+    }
+
+    .about-main-title h1 {
+        margin-left: 0;
+    }
+
+    .mission-vision-contents {
+        gap: 2rem;
+    }
+
+    .mission-vision-item p:not(:first-child) {
+        margin-bottom: .5rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .title-main-contents {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .mission-vision {
+        margin: 2rem;
+    }
+    .mission-vision-contents {
+        text-align: center;
+        margin: 2rem;
+    }
+
+    .mission-vision-contents-group-1 {
+        display:flex;
+        flex-direction: column-reverse;
+        margin-bottom: 2rem;
+        gap: 1rem;
+    } 
+
+    .mission-vision-contents-group-2 {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .mission-vision-item img {
+        width: 100%;
+        max-height: 20rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .mission-vision-contents {
+        text-align: center;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .mission-vision {
+        margin: 2rem 0;
+    }
+}
+
+
+
+

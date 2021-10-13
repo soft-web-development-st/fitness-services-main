@@ -1,0 +1,785 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --light-grey: #f8f6f6;
+    --font-grey: #6c6d6e;
+    --secondary-font-grey: #a5abb4;
+    --grey: #c9cfda;
+    --linebreak-grey: #e1e6ee;
+    --color-grey: #3A3B3C;
+    --white: white;
+    --black: black;
+    --red: rgb(180, 19, 19);
+    --border-size: 2px;
+}
+
+/* =================
+    Universal Styles
+    ================ */
+
+/* NOTE: All Media Queries for Universal Styles is on this page */
+
+body {
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+}    
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main {
+    width: 100%;
+    height: 600px;
+    background: url('./images/main.jpg') no-repeat center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: .1rem;
+    z-index: 1;
+}
+
+.main:after {
+    position: absolute;
+    content: '';
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.nav-2 a {
+    margin-left: 1.6rem;
+    color: var(--color-grey);
+}
+
+.nav-2 a:hover {
+    border-bottom: 1px solid var(--color-grey);
+    margin-bottom: -1px;
+}
+
+.nav-2-contents-right a:first-child,
+.about-nav-2-contents-right a:nth-child(2),
+.trainer-nav-2-contents-right a:nth-child(5) {
+    color: var(--red);
+    font-weight: 800;
+    border-bottom: 1px solid var(--red);
+    margin-bottom: -1px;
+}
+
+.main-title-h1 {
+    color: var(--white);
+    font-size: 2.5rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.title-main-contents {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--white);
+}
+
+.title-h2,
+.title-h5 {
+    text-transform: uppercase;
+}
+.title-h2 {
+    font-size: 2rem;
+}
+
+.title-h5 {
+    font-size: 1rem;
+    margin: .4rem 0;
+}
+
+.contents-p {
+    font-size: .8rem;
+}
+
+.btn {
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    padding: 0.6250em 1.2500em;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 500px;
+}
+
+.red-button {
+    background-color: var(--red);
+    color: var(--white);
+    text-transform: uppercase;
+    margin-top: 2rem;
+}
+
+.linebreak {
+    border-bottom: .1px solid var(--linebreak-grey);
+    margin: 4px 1rem;
+}
+
+.linebreak-vertical {
+    border-left: .4px solid var(--color-grey);
+    margin: 4px 1rem;
+}
+
+/* Hamburger Menu - Displayed on Mobiles ONLY */
+.hamburger-menu-wrap{
+    display: none;
+}
+
+/* ======
+    Nav 1 
+    ====== */
+/* Nav 1 section */
+.nav-1 {
+    margin: .4rem 0;
+}
+
+/* Container wrapping around all nav 1 content */
+.nav-1-contents {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Top nav social media icons */
+.nav-1-contents-left a {
+    color: var(--color-grey);
+    margin-right: .4rem;
+    font-size: .9rem;
+}
+
+/* Top nav contact number */
+.nav-1-contents-right {
+    color: var(--color-grey);
+    font-size: .8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.nav-1-contents-right span {
+    color: var(--red);
+    font-weight: 700;
+}
+
+
+/* ======
+    Nav 2 
+    ====== */
+/* Nav 2 section */
+.nav-2 {
+    margin: 2rem 0;
+    text-transform: uppercase;
+}    
+/* Container wrapping around all nav 2 content */
+.nav-2-contents {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.nav-2-contents-left {
+    color: var(--color-grey);
+    font-size: 1.7rem;
+}
+
+/* Bottom nav links (a tags) */
+.nav-2-contents-right,
+.about-nav-2-contents-right,
+.trainer-nav-2-contents-right {
+    color: var(--color-grey);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* ======
+    Main
+    ====== */
+/* Background image */
+.home-main {
+    height: 600px;
+    background: url('./images/main.jpg') no-repeat center;
+    background-size: 100% 100%;
+}
+
+/* Text within the main section */
+.main-contents {
+    max-width: 30rem;
+}
+
+.main-contents h5 {
+    color: var(--grey);
+    margin: .7rem 0 1.4rem 0;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.main-contents p {
+    color: var(--grey);
+    font-size: .9rem;
+}
+
+/* ================
+    Goals - Achieve
+    =============== */
+/* Goals - Achieve section structure */
+.goals-achieve {
+    background-color: var(--light-grey);
+    padding: 4rem 0;
+    text-align: center;
+}
+
+/* controls the contents in this section */
+.goals-achieve-contents {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    color: var(--color-grey);
+    position: relative;
+}
+
+/* styles for each element within the contents section */
+.goals-achieve-item h5 {
+    text-transform: uppercase;
+    margin: 1.5rem 0 1rem 0;
+    font-size: 1.2rem;
+}
+
+.goals-achieve-item p {
+    line-height: 1.2;
+    font-size: .95rem;
+    width: 90%;
+    margin: 0 auto 1rem auto;
+}
+
+.goals-achieve-item a {
+    text-transform: uppercase;
+    color: var(--red);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.goals-achieve-item a:hover {
+    border-bottom: 1.2px solid var(--red);
+}
+
+.goals-achieve-item a::after {
+    position: absolute;
+    font-family: "Font Awesome 5 Free";
+    content: '\f054';
+    margin-left: .5rem;
+    transition: all 0.6s ease;
+}
+
+.goals-achieve-item a:hover::after {
+    transform: translateX(50%);
+}
+
+/* SVG img */
+.goals-achieve-item img {
+    width: 4rem;
+    height: 4rem;
+}
+
+/* SVG img background */ 
+.svg-img {
+    background-color: var(--red);
+    padding: 1rem;
+    border-radius: 50%;
+    width: 7rem;
+    height: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ================
+    Goals - Achieve
+    =============== */
+/* controls the contents in this section */
+.why-us-contents {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+    align-items: center;
+    justify-content: end;
+    color: var(--color-grey);
+}
+.why-us{
+    margin-bottom: 1.5px;
+}
+
+
+/* =======
+    Why Us
+    ====== */
+/* Contents on the left of the two grid colums */
+/* styles for h2, h5, p are all at the top in the universal styles section */
+/* -- a tag is styled using btn class in universal section and main section a tag */
+
+
+
+/* Image on the right of the two grid columns */
+.why-us-contents-left img {
+    width: 100%;
+    max-height: 50rem;
+}
+
+
+/* ================
+    Testimonials
+    =============== */
+/* controls the contents in this section */
+.testimonials {
+    background-color: var(--color-grey);
+    color: var(--grey);
+    padding: 4rem 0;
+    text-align: center;
+    margin-top: 4rem;
+    position: relative;
+    height: 70vh;
+    margin: 0 auto;
+    padding: 5rem;
+    max-width: 100%;
+    /* display: grid; */
+    overflow: hidden;
+}
+/* styles for each element within the contents section */
+.testimonials-contents > p {
+    font-weight: 200;
+    margin-top: 1rem;
+}
+
+.testimonials-contents{
+    display: grid;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    place-items: center;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+}
+
+.testimonials-contents img {
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+    margin: 1rem 0;
+    margin: 2rem auto;
+}
+.t-img{
+  object-fit: cover;  
+}
+.test-text{
+    margin-bottom: 4rem;
+    max-width:850px ;
+}
+
+.testimonials-contents h5,
+.testimonials-contents h5 + p {
+    text-transform: uppercase;
+}
+
+.testimonials-contents h5 {
+    color: var(--red);
+    font-size: 1.1rem;
+    margin-bottom: .3rem;
+}
+
+.quote-icon{
+    color: rgb(180, 19, 19);
+    margin-top: 10px;
+    font-size: 20px;
+}
+.btns, .next-btn{
+    position: absolute;
+    z-index: 999;
+    background-color: transparent;
+    border: none;
+    color:#6c6d6e;
+    transition: all .3s linear;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 0 5px;
+}
+.btns:hover{
+    color: white;
+}
+.next-btn{
+    right: 10%;
+    top: 50%;
+}
+.prev-btn{
+left: 10%;
+top: 50%;
+
+}
+p.test-testimonial{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 18px;
+    font-weight: 600;
+}
+.test-testimonial span{
+    color: red;
+}
+p.test-text{
+    width: 90%;
+    text-align: center;
+    
+}
+
+
+
+
+/* ======
+    Bottom Nav  
+    ====== */
+/* This is exactly the same as Nav 1 - no style changes made */
+
+
+/* =======
+    Footer 
+    ======= */
+/* controls the contents in this section */
+.footer {
+    margin: .8rem 0;
+}
+
+/* styles for each element within the contents section */
+.footer-contents {
+    display: flex;
+    justify-content: center;
+    font-size: .75rem;
+    color: var(--color-grey);
+}
+
+.footer-contents span {
+    font-weight: 900;
+    font-size: .9rem;
+}
+
+
+/* =============
+   Media Queries
+   ============= */
+@media screen and (max-width: 1024px) {
+    /* Universal Styles */
+    .nav-2 a {
+        margin-left: .6rem;
+    }
+
+    .title-h2 {
+        font-size: 1.7rem;
+    }    
+
+    .title-h5 {
+        font-size: .9rem;
+    }
+
+    .contents-p {
+        font-size: .75rem;
+    }
+
+    /* Home Page Styles */
+    .why-us {
+        margin: 2rem;
+    }
+    .why-us-contents-right .title-h5 {
+        margin: 0;
+    }
+
+    .why-us-contents-right .red-button  {
+        margin-top: .5rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .nav-2-contents-right.nav-2 {
+        display: none;
+    }
+    /* *** Hamburger Menu ONLY */
+    .hamburger-menu-wrap {
+        display: block;
+        position: relative;
+        top: -1rem;
+        right: 1rem;
+        z-index: 10;
+    }
+
+    .hamburger-menu-wrap .toggler {
+        position: absolute;
+        top: 4rem;
+        right: 0;
+        z-index: 20;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        opacity: 0;
+    }
+
+    /* this is the square the hamburger lines will be inside of */
+    .hamburger-menu-wrap .hamburger {
+        position: absolute;
+        top: 4rem;
+        right: 0;
+        z-index: 10;
+        width: 60px;
+        height: 60px;
+        padding: 1rem;
+        background: transparent;
+        display: flex;
+        place-items: center center;
+    }
+
+    /* Hamburger Lines - this is the middle line */
+    .hamburger-menu-wrap .hamburger > div {
+        position: relative;
+        width: 100%;
+        height: 2px;
+        background-color: var(--black);
+        display: flex;
+        place-items: center center;
+        transition: all 0.4s ease;
+    }
+
+    /* Hamburger Lines - this is the top & bottom lines */
+    .hamburger-menu-wrap .hamburger > div::before,
+    .hamburger-menu-wrap .hamburger > div::after {
+        content: '';
+        position: absolute;
+        z-index: 10;
+        top: -10px; /* this puts both lines on the top */
+        width: 100%;
+        height: 2px;
+        background-color: inherit;
+    }
+
+    .hamburger-menu-wrap .hamburger > div::after {
+        top: 10px; /* this moves the bottom line under the middle line */
+    }
+
+    /* Togger Animation - when the hamburger menu is clicked on */
+    .hamburger-menu-wrap .toggler:checked + .hamburger > div {
+        transform: rotate(135deg);
+        background-color: var(--white);
+    }
+
+    /* Show Menu when hamburger menu is clicked */
+    .hamburger-menu-wrap .toggler:checked ~ .hamburger-menu {
+        visibility: visible;
+    }
+
+    /* Show Menu (not links) when hamburger menu is clicked by setting scale to 1 */
+    .hamburger-menu-wrap .toggler:checked ~ .hamburger-menu > div {
+        transform: scale(1);
+        transition-duration: var(--hamburger-menu-speed);
+    }
+
+    /* Shows menu & links when hamburger menu is clicked */
+    .hamburger-menu-wrap .toggler:checked ~ .hamburger-menu > div > div {
+        opacity: 1;
+        transition: opacity 0.4s ease;
+    }
+
+    /* Turns hamburger lines into x (targets the before and after lines) */
+    .hamburger-menu-wrap .toggler:checked + .hamburger > div::before,
+    .hamburger-menu-wrap .toggler:checked + .hamburger > div::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+
+    /* Rotates X on hover state when in checked state */
+    .hamburger-menu-wrap .toggler:checked:hover + .hamburger > div {
+        transform: rotate(225deg);
+    }
+
+    /* Style for the menu itself */
+    .hamburger-menu-wrap .hamburger-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        visibility: hidden;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Style for the menu items background */
+    .hamburger-menu-wrap .hamburger-menu > div {
+        background-color: var(--red);
+        border-radius: 50%; /* this creates the background circle effect */
+        /* width & height set to 200vw & vh because want it to go outside the screen */
+        width: 200vw;
+        height: 200vh;
+        display: flex;
+        flex: none;
+        justify-content: center;
+        align-items: center;
+        transform: scale(0); /* creates the shootout effect */
+        transition: all 0.4s ease;
+    }
+
+    /* Style for the menu */
+    .hamburger-menu-wrap .hamburger-menu > div > div {
+        text-align: center;
+        max-width: 90vw;
+        max-height: 100vh;
+        opacity: 0; 
+        transition: opacity 0.4s ease;
+    }
+
+    .hamburger-menu-wrap .hamburger-menu > div > div > ul > li {
+        padding: .4rem;
+    }
+
+    /* Style for the menu items */
+    .hamburger-menu-wrap .hamburger-menu > div > div > ul > li > a {
+        color: var(--white);
+        font-weight: 600;
+        transition: color 0.4s ease;
+    }
+
+    .hamburger-menu-wrap .hamburger-menu > div > div > ul > li > a:hover {
+        border-bottom: 2px solid var(--white);
+        margin-bottom: -2px;
+    }
+    
+}
+
+@media screen and (max-width: 800px) {
+    /* Home Page Styles */
+    .goals-achieve-contents {
+        gap: 0;
+    }
+
+    .goals-achieve-item h5 {
+        font-size: 1rem;
+    }
+
+    .goals-achieve-item p {
+        font-size: .9rem;
+    }
+
+    .goals-achieve-item a {
+        font-size: 1rem;
+    }
+
+    .why-us-contents {
+        display:flex;
+        flex-direction: column-reverse;
+        gap: 2rem 0;
+    }
+
+    .why-us-contents-right {
+        text-align: center;
+        margin: 0 1rem;
+    }
+
+    .why-us-contents-right .title-h5 {
+        margin: .5rem;
+    }
+
+    .why-us-contents-right .red-button  {
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (max-width: 635px) {
+    .footer-contents {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    /* Universal Styles */
+    .main-title-h1 {
+        font-size: 2rem;
+        line-height: 1;
+    }
+
+    /* Home Page Styles */
+    .nav-1-contents {
+        flex-direction: column-reverse;
+    }
+
+    .home-main {
+        height: 450px;
+    }
+
+    .goals-achieve {
+        padding: 2rem 0;
+    }
+
+    .goals-achieve-contents {
+        grid-template-columns: 1fr;
+        gap: 1rem 0;
+    }
+
+    .svg-img {
+        width: 6rem;
+        height: 6rem;
+    }
+
+    .goals-achieve-item img {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    .goals-achieve-item h5 {
+        margin: 1rem 0 .5rem 0;
+    }
+
+    .why-us {
+        margin: 2rem 0; 
+    }
+
+    .why-us-contents {
+        gap: 1rem 0;
+    }
+
+    .testimonials {
+        padding: 2rem 0;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    /* Universal Styles */
+    .nav-1-contents-right {
+        font-size: .7rem;
+        font-weight: 400;
+    }
+}
